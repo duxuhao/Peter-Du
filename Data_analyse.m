@@ -12,7 +12,7 @@ ReSM=resample(SM,fs2,fs);%resample to fit the original signal
 SMNoise=ReSM((end-fs2+1):end);
 fftSMNoise=abs(fft(SMNoise,fs2)*2)/fs2;
 figure
-plot(20*log10(fftSMNoise),'r');
+plot(20*log10(fftSMNoise),'r');%test for the edit
 xlabel('Frequency (Hz)','fontsize',14);
 ylabel('dB','fontsize',14);
 axis([0 fs2/2 min(20*log10(fftSMNoise)) max(20*log10(fftSMNoise))])
